@@ -1,0 +1,33 @@
+Feature: Create Truck insurance quotes
+  As a user of the Vehicle Insurance Application
+  I want to complete the truck quote workflow
+  So that the available quote option can be selected
+
+  Scenario Outline: <caseName> [<caseId>]
+    Given I open the configured insurance application
+    When I select the vehicle type for case "<caseId>"
+    And I complete the Vehicle Data form for case "<caseId>"
+    And I complete the Insurant Data form for case "<caseId>"
+    And I complete the Product Data form for case "<caseId>"
+    And I choose the price option for case "<caseId>"
+    Then I return home after confirming the quote option for case "<caseId>"
+
+    Examples:
+      | caseId | caseName |
+      | truck-straightthrough | StraightThrough |
+      | truck-engine-performance-between-1000-and-2000 | Engine performance between 1000 and 2000 |
+      | truck-manufactured-more-than-5-years-in-the-past | Manufactured more than 5 Years in the Past |
+      | truck-age-between-18-an-25 | Age between 18 an 25 |
+      | truck-age-between-56-and-70 | Age between 56 and 70 |
+      | truck-female | Female |
+      | truck-start-date-month-after-next-month | Start date month after next month |
+      | truck-insuarance-sum-between-15m-and-35m | Insuarance sum between 15M and 35M |
+      | truck-damage-insurance-no-coverage | Damage Insurance No Coverage |
+      | truck-damage-insurance-full-coverage | Damage Insurance Full Coverage |
+      | truck-payload-between-1k-and-4k | Payload between 1k and 4k |
+      | truck-payload-between-10k-and-25k | Payload between 10k and 25k |
+      | truck-total-weight-between-3-5k-and-7k | Total Weight between 3.5k and 7k |
+      | truck-total-weight-between-18k-and-45k | Total Weight between 18k and 45k |
+      | truck-list-price-between-100k-and-300k | List price between 100K and 300K |
+      | truck-optional-products-3 | Optional Products_3 |
+      | truck-euro-protection | Euro Protection |

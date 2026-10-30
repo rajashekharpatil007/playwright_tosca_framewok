@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+allure-results/
+allure-report/
+reports/
+playwright-report/
+test-results/
+*.log
